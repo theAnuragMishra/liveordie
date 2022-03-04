@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Biggest choice!</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Hubballi&family=Noto+Sans&display=swap');
+
+        body {
+            text-align: center;
+            background: url("https://www.seekpng.com/png/full/793-7936781_ceu-sticker-celebration-of-life-the-heavens.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            font-size: large;
+
+
+        }
+
+        h1 {
+            font-family: 'Hubballi', cursive;
+            text-shadow: 1px 1px black;
+        }
+
+        input[type="text"] {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+            width: 300px;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        input[type="radio"] {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        .button {
+            width: 150px;
+            height: 50px;
+            border: 2px solid rgb(121, 121, 233);
+            border-radius: 5px;
+            font-size: large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: cyan;
+        }
+
+        .button:hover {
+            cursor: pointer;
+            background-color: rgb(132, 192, 192);
+        }
+
+        .footer {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            font-size: 15px;
+            background-color: black;
+            color: white;
+            width: 100vw;
+            height: 50px;
+            padding-top: 22px;
+        }
+
+        .radios input[type="radio"] {
+            width: 20px;
+            height: 20px;
+        }
+
+        .radios {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 30px;
+        }
+
+        #wish {
+            display: none;
+        }
+
+        .result {
+            margin-top: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Choose any one out of them two...and write your last wish in the box</h1>
+        <!-- <div class="img">
+        <img src="https://www.seekpng.com/png/full/793-7936781_ceu-sticker-celebration-of-life-the-heavens.png"
+            alt="a skull and nothing else" width="300">
+    </div> -->
+        <div class="radios">
+            <label for="Live">
+                <input id="lib" type="radio" name="Live-Die" onclick="lib()">Live
+            </label>
+            or
+            <label for="Die"><input id="di" type="radio" name="Live-Die" onclick="di()">Die?
+            </label><br><br>
+        </div>
+
+        <input type="text" placeholder="your last wish goes here..." required id="wish">
+
+        <button type="submit" onclick="fn()" class="button" id="btn">Choose</button><br><br><br><br>
+        <div id="result"></div>
+        <footer class="footer">Form created by The God(Hrishikesh Das)</footer>
+    </div>
+    <script>
+        // var btnvalue;
+
+        // if (document.getElementById('lib').checked) {
+        //     btnvalue = "I'll live.";
+
+        // } else if (document.getElementById('di').checked) {
+        //     btnvalue = "Wanna die.";
+        // } else {
+        //     btnvalue = "Choose";
+        // }
+
+        // document.getElementById("btn").innerHTML = btnvalue;
+
+        function lib() {
+            document.getElementById("btn").innerHTML = "I'll live.";
+            document.getElementById("wish").style.display = "none";
+            document.getElementById("result").innerHTML = "";
+        }
+
+        function di() {
+            document.getElementById("btn").innerHTML = "Lemme die.";
+            document.getElementById("wish").style.display = "block";
+            document.getElementById("wish").style.margin = "auto";
+            document.getElementById("wish").style.marginBottom = "20px";
+            document.getElementById("result").innerHTML = "";
+
+
+        }
+
+        function fn() {
+            var wish = document.getElementById('wish').value;
+            if (document.getElementById('lib').checked) {
+
+                result = "Okay, you live and there's no reason we would ask your wish. Go do some work."
+
+                alert("Jaa JEE le apni jindagi!")
+
+            } else {
+                result = "Okay! Your wish \"" + document.getElementById('wish').value +
+                    "\" will be fulfilled. Go perish."
+
+                alert("Maro ya Jiyo, mujhe kya?")
+            }
+
+            var resultbox = document.getElementById("result");
+            document.getElementById("result").innerHTML = result;
+            resultbox.setAttribute('style', 'text-align: center; display:block; font-family:Fredoka; font-size: 50px;');
+
+        }
+    </script>
+</body>
+
+</html>
