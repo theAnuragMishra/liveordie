@@ -90,18 +90,20 @@
         }
 
         .learn {
-            width: 300px;
+            width: 141px;
             height: 50px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 20px;
+            font-size: 13px;
             border: 3px solid blue;
             border-radius: 5px;
             text-align: center;
-            background: linear-gradient(90deg, pink, rgb(243, 157, 172));
-            position: relative;
+            background: linear-gradient(90deg, rgb(235, 108, 129), rgb(88, 136, 213));
+            position: fixed;
             display: block;
             margin: auto;
-            top: 290px;
+            top: 16px;
+            left: 20px;
+
 
 
         }
@@ -111,13 +113,56 @@
             color: black;
             text-shadow: 1px 1px black;
             position: absolute;
-            top: 22%;
-            left: 14px;
+            top: 19%;
+            left: 3px;
         }
 
+
         .learn:hover {
-            background: linear-gradient(90deg, rgb(241, 149, 165), rgb(236, 118, 138));
+            background: linear-gradient(90deg, rgb(235, 73, 100), rgb(56, 119, 219));
             cursor: pointer;
+        }
+
+        .learn ul {
+            list-style-type: none;
+        }
+
+        .source {
+            width: 141px;
+            height: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 13px;
+            border: 3px solid blue;
+            border-radius: 5px;
+            text-align: center;
+            background: linear-gradient(90deg, rgb(212, 210, 60), rgb(230, 69, 37));
+            position: fixed;
+            display: block;
+            margin: auto;
+            top: 16px;
+            right: 25px;
+
+
+
+        }
+
+        .source a {
+            text-decoration: none;
+            color: black;
+            text-shadow: 1px 1px black;
+            position: absolute;
+            top: 31%;
+            left: 29px;
+        }
+
+
+        .source:hover {
+            background: linear-gradient(90deg, rgb(214, 211, 7), rgb(224, 42, 5));
+            cursor: pointer;
+        }
+
+        .source ul {
+            list-style-type: none;
         }
     </style>
 </head>
@@ -143,8 +188,17 @@
         <button type="submit" onclick="fn()" class="button" id="btn">Choose</button><br><br><br><br>
         <div id="result"></div>
 
-        <div class="learn"><a href="https://www.youtube.com/channel/UC9DloEs6b9xLwtQQTe0F32g/" target="_blank">Learn
-                some cool stuff here.</a></div>
+        <div class="learn">
+            <ul>
+                <li><a href="https://www.youtube.com/channel/UC9DloEs6b9xLwtQQTe0F32g/" target="_blank">Learn
+                        some cool stuff here.</a></li>
+            </ul>
+        </div>
+        <div class="source">
+            <ul>
+                <li><a href="" target="_blank">Source Code</a></li>
+            </ul>
+        </div>
         <footer class="footer">Created by Hrishikesh and Anurag.</footer>
     </div>
     <script>
@@ -181,13 +235,13 @@
             var wish = document.getElementById('wish').value;
             if (document.getElementById('lib').checked) {
 
-                result = "Okay, you live and there's no reason we would ask your wish. Go do some work."
+                result = "Life is hard, but you chose to live."
 
                 alert("Jaa JEE le apni jindagi!")
 
             } else {
                 result = "Okay! Your wish \"" + document.getElementById('wish').value +
-                    "\" will be fulfilled. Go perish."
+                    "\" will be fulfilled. Perish."
 
                 alert("Maro ya Jiyo, mujhe kya?")
             }
