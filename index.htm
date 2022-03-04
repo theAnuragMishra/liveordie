@@ -88,12 +88,43 @@
         .result {
             margin-top: 90px;
         }
+
+        .learn {
+            width: 300px;
+            height: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            border: 3px solid blue;
+            border-radius: 5px;
+            text-align: center;
+            background: linear-gradient(90deg, pink, rgb(243, 157, 172));
+            position: relative;
+            display: block;
+            margin: auto;
+            top: 290px;
+
+
+        }
+
+        .learn a {
+            text-decoration: none;
+            color: black;
+            text-shadow: 1px 1px black;
+            position: absolute;
+            top: 22%;
+            left: 14px;
+        }
+
+        .learn:hover {
+            background: linear-gradient(90deg, rgb(241, 149, 165), rgb(236, 118, 138));
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
     <div id="main">
-        <h1>Choose any one out of them two...and write your last wish in the box</h1>
+        <h1>Either you live, or you die. That's the game.</h1>
         <!-- <div class="img">
         <img src="https://www.seekpng.com/png/full/793-7936781_ceu-sticker-celebration-of-life-the-heavens.png"
             alt="a skull and nothing else" width="300">
@@ -111,7 +142,10 @@
 
         <button type="submit" onclick="fn()" class="button" id="btn">Choose</button><br><br><br><br>
         <div id="result"></div>
-        <footer class="footer">Form created by The God (Hrishikesh Das)</footer>
+
+        <div class="learn"><a href="https://www.youtube.com/channel/UC9DloEs6b9xLwtQQTe0F32g/" target="_blank">Learn
+                some cool stuff here.</a></div>
+        <footer class="footer">Created by Hrishikesh and Anurag.</footer>
     </div>
     <script>
         // var btnvalue;
